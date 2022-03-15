@@ -1,10 +1,21 @@
 import React, { Component } from "react";
+import propTypes from "prop-types";
 
 import Section from "./Section/Section";
 import FeedbackOptions from "./Section/FeedbackOptions/FeedbackOptions";
 import Statistics from "./Section/Statistics/Statistics";
 
 class App extends Component {
+  static propTypes = {
+    state: propTypes.shape({
+      Good: propTypes.number.isRequired,
+      Neutral: propTypes.number.isRequired,
+      Bad: propTypes.number.isRequired,
+    }),
+    countTotalFeedback: propTypes.func,
+    countPositiveFeedbackPercentage: propTypes.func,
+    handleButton: propTypes.func,
+  }
 
   
   state = {
@@ -61,3 +72,4 @@ class App extends Component {
 }
 
 export default App
+

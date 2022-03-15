@@ -1,6 +1,7 @@
 import React from "react";
 import css from './Statistics.module.css'
 import Notification from '../Notification/Notification'
+import propTypes from "prop-types";
 
 const Statistics = ({ good,neutral,bad, total, positivePercentage }) => {
     return (
@@ -30,6 +31,14 @@ const Statistics = ({ good,neutral,bad, total, positivePercentage }) => {
 }
     
 export default Statistics
+
+Statistics.propTypes = {
+    good:propTypes.number.isRequired,
+    neutral:propTypes.number.isRequired,
+    bad:propTypes.number.isRequired,
+    total:propTypes.number.isRequired,
+    positivePercentage:propTypes.number.isRequired,
+}
 
 
 // {Object.keys(state).map(item =>
