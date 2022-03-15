@@ -9,9 +9,9 @@ class Section extends Component {
         return (
             <>
                 {title && <section className={css.feedbackSection}>
-                    <h1 className={css.title}>{title}</h1>
-                    {children}
-                </section>}
+                            <h1 className={css.title}>{title}</h1>
+                            {children}
+                          </section>}
             </>
 
         )

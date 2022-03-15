@@ -7,20 +7,20 @@ const Statistics = ({ good,neutral,bad, total, positivePercentage }) => {
         <>
             <h2 className={ css.title }>Statistics</h2>            
             {total  ? <ul className={css.feedbackCountList}>
-                            <li className="feedbackItem" key={"good"}>
-                                {<p className="value">{`Good: ${good} `}</p>}
+                            <li className={css.feedbackItem} key={"good"}>
+                                {<p className={css.value}>{`Good: ${good} `}</p>}
                             </li>
-                            <li className="feedbackItem" key={"neutral"}>
-                                {<p className="value">{`Neutral: ${neutral} `}</p>}
+                            <li className={css.feedbackItem} key={"neutral"}>
+                                {<p className={css.value}>{`Neutral: ${neutral} `}</p>}
                             </li>
-                            <li className="feedbackItem" key={"bad"}>
-                                {<p className="value">{`Bad: ${bad} `}</p>}
+                            <li className={css.feedbackItem} key={"bad"}>
+                                {<p className={css.value}>{`Bad: ${bad} `}</p>}
                             </li>
-                            <li className="feedbackItem" key={'total'}>
-                                {<p className="value">{`Total: ${total} `}</p>}
+                            <li className={css.feedbackItem} key={'total'}>
+                                {<p className={css.value}>{`Total: ${total} `}</p>}
                             </li>
-                            <li className="feedbackItem" key={'positivePersentage'}>
-                                {<p className="value">{`Positive feedback: ${positivePercentage} %`}</p>}
+                            <li className={css.feedbackItem} key={'positivePersentage'}>
+                                {<p className={css.value}>{`Positive feedback: ${positivePercentage} %`}</p>}
                             </li>
                         </ul>
                     : <Notification message='No feedback given'/>
