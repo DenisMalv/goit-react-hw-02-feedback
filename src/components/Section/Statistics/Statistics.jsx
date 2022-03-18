@@ -42,7 +42,7 @@ Statistics.propTypes = {
 
 
 // {Object.keys(state).map(item =>
-//                             <li className="feedbackItem" key={item}>
-//                                 <p className="value">{`${item} : ${state[item]}`}</p>
-//                             </li>)
-//                         }
+//     <li className="feedbackItem" key={item}>
+//        <p className="value">{`${item} : ${state[item]}`}</p>
+//     </li>)
+//}

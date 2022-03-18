@@ -7,7 +7,7 @@ const FeedbackOptions = ({options,onLeaveFeedback}) => {
             <ul className={css.buttonsList}>
                 {Object.keys(options).map(item =>
                     <li className={css.listItem} key={item}>
-                        {<button className={css.button} onClick={onLeaveFeedback}>{item}
+                        {<button className={css.button} onClick={onLeaveFeedback}>{ucFirstChar(item)}
                         </button>}
                     </li>)}
             </ul>    
@@ -15,11 +15,17 @@ const FeedbackOptions = ({options,onLeaveFeedback}) => {
 
 export default FeedbackOptions
 
+function ucFirstChar(str) {
+  if (!str) return str;
+
+  return str[0].toUpperCase() + str.slice(1);
+}
+
 FeedbackOptions.propTypes = {
     options: propTypes.shape({
-        Good:propTypes.number.isRequired,
-        Neutral:propTypes.number.isRequired,
-        Bad:propTypes.number.isRequired,
+        good:propTypes.number.isRequired,
+        neutral:propTypes.number.isRequired,
+        bad:propTypes.number.isRequired,
     }),
     onLeaveFeedback:propTypes.func,
 }
