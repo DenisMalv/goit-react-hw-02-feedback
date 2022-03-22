@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import propTypes from "prop-types";
 
 import Section from "./Section/Section";
 import FeedbackOptions from "./Section/FeedbackOptions/FeedbackOptions";
